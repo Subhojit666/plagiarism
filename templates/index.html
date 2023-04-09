@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block head %}
+<!-- 
+<style>
+.cntr {
+  margin: auto;
+  width: 80%;
+}
+
+#myProgress {
+  width: 80%;
+  background-color: black;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: yellowgreen;
+}
+</style> -->
+{% endblock %}
+{% block content %}
+  <form method="POST" action="/">
+    <div class="input-group">
+        {{ form.hidden_tag() }}
+        {{ form.checkText.label(class_="form-text", style="width: 100vw; text-align: center; font-weight: 900; font-size:50px; font-family: 'Roboto Mono', monospace;") }}<br>
+            {{ form.checkText(class_="text-area", placeholder="text") }}
+    </div>
+       <div class="text-center">{{ form.submit(class="btn btn-primary", style="margin-top: 20px;",  onclick="move()") }}</div>
+  </form>
+  <br>
+  <br>
+
+  <div id="myProgress" class="progress cntr">
+    <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+  </div>
+<script>
+  var i = 0;
+  function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 500);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+</script>
+{% endblock content %}
+  

@@ -1,0 +1,47 @@
+.cntr {
+  margin: auto;
+  width: 80%;
+}
+
+#myProgress {
+  width: 80%;
+  background-color: cornsilk;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: yellowgreen;
+
+}
+
+.form-text{
+    margin-top: 12vh;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+body{
+    /*background-color: #E3E2DF;*/
+    background-color: #e3e2df;
+    background-image: url("");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.subbut{
+    margin: 0 auto;
+}
+
+.navbar-brand{
+    font-family: 'Arial', cursive;
+    font-size: 25px;
+}
+
+.text-area{
+    margin: 0 auto;
+    width: 70vw;
+    height: 40vh;
+    border-radius: 8px;
+    border-color: rgb(6, 6, 94);
+}

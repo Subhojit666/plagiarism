@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+      <h1 class="display-4">Results</h1>
+      {% for x in output%}
+      <ul class="list-group">
+          <li class="list-group-item"><h4><span class="badge badge-success">Percentage Match  </span></h4><strong>{{x[0]}}</strong></li>
+          <a href="{{x[1]}}" class="list-group-item list-group-item-action"><h4><span class="badge badge-success">Follow here  </span></h4><strong>{{x[1]}}</strong></a>
+          <li class="list-group-item"></h4><span class="badge badge-success">Exact Match  </span></h4><strong>{{x[2]}}</strong></li>
+        </ul>
+        <br>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
